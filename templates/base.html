@@ -4,12 +4,19 @@
         <title>{{title}}</title>
         <style>
                 .error { color: red;}
+                .logs{float: right;}
             </style>
     </head>
 <body>
     <nav>
+        <a href="/">Home</a>
         <a href="/newpost">Add blog</a>
         <a href="/blog">Blog list</a>
+        <div class='logs'>
+        <a href="/logout">Log-out</a>
+        <a href="/login">Log-in</a>
+        </div>
+
     </nav>
 
     {% with messages = get_flashed_messages(with_categories=True) %}

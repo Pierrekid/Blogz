@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Blogz User- {{user.username}} </h1>
+<p>If you don't have an account, please <a href="/signup">create account</a> here!</p>
+
+<hr />
+    <ul>
+        {% for blogs in user.blogs %}
+        <li>
+            <h3>{{blogs.title}}</h3>
+            <p>{{blogs.body}}</p>
+            <h6>Written by <a href="/blog?user={{user.id}}">{{user.username}}</a> </h6>
+            
+            
+            <hr> 
+        </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
