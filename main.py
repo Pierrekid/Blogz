@@ -134,7 +134,7 @@ def add_blog():
         new_blog = Blog(title, body, owner)
         db.session.add(new_blog)
         db.session.commit()
-        return redirect('/blog?id={}'.format(new_blog.id))
+        return redirect(f'/blog?id={new_blog.id}')
         
 
     return render_template('blog_add.html')
