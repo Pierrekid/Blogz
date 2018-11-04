@@ -10,9 +10,9 @@
     {% if blogs|length == 0 %}
         <p> Please create a new <a href="/newpost">Blog</a> entry.</p>
     {% else %}
-        <ul>
+        <ul class="list-group">
             {% for blog in blogs %}
-            <li>
+            <li class="list-group-item">
                 <h2>
                     <a href="/blog?id={{blog.id}}">{{blog.title}}</a>
                 </h2>
